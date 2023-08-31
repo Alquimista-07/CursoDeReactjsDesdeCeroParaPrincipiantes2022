@@ -29,6 +29,49 @@ function Greeting(){
     </div>
 }
 
+// Si nos damos cuenta en el componente o función no estamos retornando un String sino html y esto es posible en
+// React gracias a que usa una sintáxis llamada JSX que es pos así decirlo una combinciación de JS con html. Por
+// lo tanto lo que permite JSX es retornar porciones de html que a la final va a ser transformado a JS
+//
+// Por lo tanto esto nos da algunas ventajas ya que por ejemplo supongamos que quiero hacer operaciones con JS 
+// también podemos hacerlo con JSX, y tener la combinación de JS y html
+function Greeting2(){
+    /*
+    // Ejemplo 1
+    const married = true;
+    return <h1>{married ? 'Estoy Casado! 😀' : 'No Estoy Casado!'}</h1>
+    */
+
+    // Ejemplo 2
+    const user = {
+        firstName: 'Jhon',
+        lastName: 'Doe'
+    }
+
+    // También podemos crear una función dentro de otra función
+    function add(x, y){
+        return x + y
+    }
+
+    // Podemos convertir a string el objeto usando {JSON.stringify(user)} pero esto nos lo va a mostrar 
+    // algo feo el texto, por lo tanto podemos usar la notación de punto de los objetos para combinarlo
+    // con html.
+    // Ahora como habíamos mencionando anteriormente que siempre debemos usar siempre <div></div> pero esto no siempre es así
+    // ya que si no queremos usar un div dentro de otro div, es decir usar un contenedor vacío entonces para esto react nos 
+    // permite usar una etiqueta  especial que nos da JSX llamada fragment y la indicamos como <></> y cumple con la regla de 
+    // react que dice que siempre tiene que haber una etiqueta que contenga a otra y a su vez en JS dice que no voy a usar nada 
+    // allí y de esta forma podemos evitar la etiqueta.
+    return (
+        <>
+            <h1>{ user.firstName }</h1>
+            <h3>{ user.lastName }</h3>
+
+            <h2>{ add(10, 30) }</h2>
+            
+        </>
+    );
+}
+
 // Ahora para indicarle a React que voy a poner dentro de la aplicación usamos el root y la función render
 // la cual espera elementos hijos html
 root.render(
@@ -48,10 +91,9 @@ root.render(
     // <Greeting/>
     //
     // Adicionalmente como son componentes los podemos reutilizar es decir llamar varias veces.
-    <div>
-        <Greeting/>
-        <Greeting/>
-        <Greeting/>
-        <Greeting/>
-    </div>
+    <>
+        <Greeting2/>
+        <Greeting2/>
+        <Greeting2/>
+    </>
 );
