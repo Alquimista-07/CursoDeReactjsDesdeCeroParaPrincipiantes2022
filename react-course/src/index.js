@@ -15,8 +15,43 @@ import ReactDOM from 'react-dom/client';
 // inicializada
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
+// Componente: Cuando hablamos de componentes en React literalmente estamos hablando de funciones
+// y el asunto con los componentes es que son funciones que siempre retornan una interfaz y dentro
+// de dichas funciones podemos retornar esas porciones de interfaz que es un poco extraño ya que 
+// es html. Adicionalmente como es un componente esto quiere decir que lo podemos reutilizar
+function Greeting(){
+    // También es bastante importante tener en cuenta es que si nos damos cuenta siempre llamamos un <div></div>
+    // al inicio y esto es justamente porque existe una regla la cual dice que siempre debe haber un elemento que
+    // contenga a los demás.
+    return <div>
+        <h1>Este es un componente!</h1>
+        <p>Lorem ipsum dolor 123</p>
+    </div>
+}
+
 // Ahora para indicarle a React que voy a poner dentro de la aplicación usamos el root y la función render
 // la cual espera elementos hijos html
 root.render(
-    <h1>Hola Mundo Desde React!!!...</h1>
+    // Utilizamos el componente y lo que nos dice react para poder utilizar o interpretar una función dentro de una porción de
+    // html debemos indicar las llaves {} de la siguiente forma:
+    //
+    //  { Greeting() }
+    //
+    // Pero el hecho de usar llaves hace que no se vea tan entendible y si es una app grande es peor, por lo tanto una de las bondades
+    // que ofrece React es que podemos escribir el llamado a la función como si fuera una etiqueta html incluso no es necesario cerrar
+    // la etiqueta como se hace en html normalmente así:
+    //
+    // <Greeting></Greeting>
+    // 
+    // Sino que también podemos indicar el cierre de la siguiente forma:
+    //
+    // <Greeting/>
+    //
+    // Adicionalmente como son componentes los podemos reutilizar es decir llamar varias veces.
+    <div>
+        <Greeting/>
+        <Greeting/>
+        <Greeting/>
+        <Greeting/>
+    </div>
 );
