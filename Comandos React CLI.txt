@@ -1,0 +1,35 @@
+COMANDOS REACT CLI
+
+NOTA: Lis siguiente enlace nos dirige a la web oficial de React https://es.react.dev/
+
+-----------------------------------------------------------------------------------------------------------
+* El siguiente comando me permite crear una aplicación
+-----------------------------------------------------------------------------------------------------------
+
+	npx create-react-app nombre-app
+	
+-----------------------------------------------------------------------------------------------------------
+* El siguiente comando me permite levantar el servidor de desarrollo para ejecutar la aplicación
+-----------------------------------------------------------------------------------------------------------
+
+	npm start
+
+-----------------------------------------------------------------------------------------------------------
+* El siguiente comando me permite construir la aplicación para producción
+-----------------------------------------------------------------------------------------------------------
+
+	npm run build
+
+-----------------------------------------------------------------------------------------------------------
+* El siguiente comando sirve para hacer testing de la palicación
+-----------------------------------------------------------------------------------------------------------
+
+	npm test
+
+-----------------------------------------------------------------------------------------------------------
+* El siguiente comando sirve para revelar toda la configuración cuando creamos el proyecto y permite 
+  acceder a ella y modificarla. Este comando no es muy utilizado, pues una vez lo insertamos no podemos dar 
+  vuelta atrás. Es decir, una vez has definido el eject no puedes regresar al estado anterior.
+-----------------------------------------------------------------------------------------------------------
+
+	npm run eject
