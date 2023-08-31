@@ -8,6 +8,14 @@ import React from 'react';
 // lo que tenemos que manipular es el DOM
 import ReactDOM from 'react-dom/client';
 
+// Ahora podemos importar el componente o componentes para usarlos
+import { Greeting3, UsusrioCard } from './Greeting';
+
+// Ahora para importar cuando exportamos usando el export default se hace indicando el nombre del modulo que lo colocamos nosostros
+// y su respectiva ruta. Pero también si queremos importar la otra función que exportamos de forma individual dentro del mismo archivo 
+// Product.js indicamos las llaves {}
+import Product, {Navbar} from './Product'
+
 // Recordemos que en la carpeta public tenemos un archivo index.html el cual tiene un <div id="root"></div>
 // que es donde react va a montar la aplicación. Por lo tanto ara indicarle que es lo que vamos a poner dentro 
 // de ese elemento usamos ReactDOM.createRoot y obtenemos el elemento por su id. Y todo eso nos va a devolver
@@ -92,8 +100,9 @@ root.render(
     //
     // Adicionalmente como son componentes los podemos reutilizar es decir llamar varias veces.
     <>
-        <Greeting2/>
-        <Greeting2/>
-        <Greeting2/>
+        <Greeting3/>
+        <UsusrioCard/>
+        <Product/>
+        <Navbar/>
     </>
 );
