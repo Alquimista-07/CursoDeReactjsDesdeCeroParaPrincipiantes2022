@@ -19,8 +19,13 @@ import Product, {Navbar} from './Product'
 // Importamos el componente botón
 import { Button } from './Button';
 
-// Importamos el nuevo componente TaskCard
+// Importamos el nuevo componente TaskCard y que esta usando estilos css
 import { TaskCard } from './Task';
+
+// Importamos nuestro componente creado de la segunda forma que es usando una clase (class)
+// que es otra forma adicional de crear un componente a parte de la más común que es con function
+// que es más sencilla que usar una clase
+import { Saludar } from './Saludar';
 
 // Recordemos que en la carpeta public tenemos un archivo index.html el cual tiene un <div id="root"></div>
 // que es donde react va a montar la aplicación. Por lo tanto ara indicarle que es lo que vamos a poner dentro 
@@ -160,6 +165,8 @@ root.render(
         />
 
         <TaskCard ready={true}/>
+
+        <Saludar/>
 
     </>
 );
