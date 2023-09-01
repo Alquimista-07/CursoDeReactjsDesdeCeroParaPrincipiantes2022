@@ -95,6 +95,25 @@ function Greeting2(){
     );
 }
 
+// Arreglo de ejemplo
+const users = [
+    {
+        id: 1,
+        name: 'Ryan Ray',
+        imagen: 'https://robohash.org/user1'
+    },
+    {
+        id: 1,
+        name: 'Joe',
+        imagen: 'https://robohash.org/user2'
+    },
+    {
+        id: 3,
+        name: 'Marcos',
+        imagen: 'https://robohash.org/user3'
+    }
+]
+
 // Función para ver lo del manejador de eventos en el input
 // y es la forma más común ya que queda mucho más ordenado 
 // y entendible el código en el elemento htlm
@@ -204,6 +223,23 @@ root.render(
         <br/>
         {/* Componente Post para el tema de fetch API */}
         <Post/>
+
+        {/* Para recorrer un arreglo en React se usa una forma que es mucho más cómoda
+        por así decirlo que es a través, de métodos de arreglos. Ya que si sabemos en 
+        JS lo hacemos a través de un bucle for o while, etc, pero en React lo que hace es
+        usar un enfoque que se le conoce como enfoque declarativo, o mejor dicho es una forma
+        de evitarnos estar escribiendo en código como recorrer un arreglo. Y es que en Javascript
+        ya hay métodos que nos permiten recorrer arreglos de forma sencilla como son por ejemplo
+        el map, filter, reduce, forEach. Y en React lo hacemos siguiente forma: */}
+        {users.map( (user, i) => {
+            // Ahora como React arroja un warning que inidica que cada elemento debe tener un key único
+            // que React lo solicita. Ahora tembién como map al recorrer devuelve un segundo parámetro que 
+            // un índice lo podemos usar para satisfacer el key 
+            return <div key={i}>
+                <h1>{user.name}</h1>
+                <img src={user.imagen}/>
+            </div>;
+        })}
 
     </>
 );
