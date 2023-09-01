@@ -26,3 +26,13 @@ HOOKS: Los Hooks de react son tan solo funciones que React provee para añadir f
               useSyncExternalStore
               useInsertionEffect
 --------------------------------------------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------
+       EXTENSIONES Visual Studio Code
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+Las siguientes son algunas extensiones que se instalan en VS Code y que pueden ser bastante útiles:
+
+       * Ayu: Sirve para cambiar el tema
+       * ES7+ React/Redux/React-Native snippets: Son atajos para crear componentes y demás cosas de React de forma 
+         mucho más rápida
