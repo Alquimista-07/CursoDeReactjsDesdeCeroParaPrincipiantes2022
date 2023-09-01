@@ -99,10 +99,47 @@ root.render(
     // <Greeting/>
     //
     // Adicionalmente como son componentes los podemos reutilizar es decir llamar varias veces.
+
+    // Por lo tanto ya con el concepto de props, podemos pasarle un dato a un componente ya que recordemos que no son más que
+    // una función, por lo tanto para pasar un valor simplemente escribimos como una especia de atributo algo de la siguiente forma:
+    // <Greeting3 title="Hola"/> y title="Hola" son 2 valores que quiero pasarles, es decir, no están definidos yo puedo pasarle
+    // cualquier cosa al componente y lo único requerido es que tienen que tener ese formato como si fuera clave valor.
+    // Adicionalmente cuando queremos pasar un número u otra tipo de dato difetente a un string tenemos que pasarlo con la 
+    // interpretación de jsx es decir con llaves {}
+    // Ejemplo:
+    // <Greeting3 y={30}/> // Números
+    // <Greeting3 z={true} // Boolean
+    // <Greeting3 a={[1, 2, 3]}/> // Array
+    // <Greeting3 address={{street: '123 Main Street', city: 'New York'}/> // Objects
+    // 
+    // Y también podemos pasar funciones
+    // <UsusrioCard {function () { alert('Hello') }}/>
+    //
     <>
-        <Greeting3/>
-        <UsusrioCard/>
-        <Product/>
-        <Navbar/>
+        <Greeting3 title="Hola Mundo" name="Joe"/>
+        <Greeting3 title="Hola React" name="Ryan"/>
+        <Greeting3 title="Hola JSX"/>
+        <Greeting3 title="Hola JavaScript"/>
+        <Greeting3 title="Hola Fazt"/>
+
+        <UsusrioCard 
+            name="Ryan Ray" 
+            amount={3000} 
+            married={true} 
+            points={[99, 33.3, 22.2]} 
+            address={{street: '123 Main Street', city: 'New York'}}
+            greet={function () { alert('Hello') }}
+        />
+
+        <UsusrioCard
+            name="Homer Simpson"
+            amount={1000}
+            married={false}
+            points={[100, 20]}
+            address={{
+                street: 'Siempre Viva some 123',
+                city: 'Springfield'
+            }}
+        />
     </>
 );
