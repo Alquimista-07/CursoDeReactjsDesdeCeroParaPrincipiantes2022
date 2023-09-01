@@ -1,16 +1,5 @@
-// Importamos nuestras tareas y las renombramos usando as
-import { tasks as data } from './tasks';
-
-import { useState, useEffect } from 'react';
-
-function Tasklist() {
-
-    const [tasks, setTasks] = useState([]);
-
-    // Cuando cargue el componente establecemos los valores
-    useEffect(() => {
-        setTasks(data)
-    }, [])
+// Le pasamos el arreglo de tareas como un props
+function Tasklist({tasks}) {
     
     // Validamos
     if(tasks.length === 0){
