@@ -16,6 +16,9 @@ import { Greeting3, UsusrioCard } from './Greeting';
 // Product.js indicamos las llaves {}
 import Product, {Navbar} from './Product'
 
+// Importamos el componente botón
+import { Button } from './Button';
+
 // Recordemos que en la carpeta public tenemos un archivo index.html el cual tiene un <div id="root"></div>
 // que es donde react va a montar la aplicación. Por lo tanto ara indicarle que es lo que vamos a poner dentro 
 // de ese elemento usamos ReactDOM.createRoot y obtenemos el elemento por su id. Y todo eso nos va a devolver
@@ -116,6 +119,17 @@ root.render(
     // <UsusrioCard {function () { alert('Hello') }}/>
     //
     <>
+        {/* Este es un ejempolo de comentario en JSX dentro de etiquetas */}
+        
+        <Button text="Click me"/>
+        <Button text="Pay"/>
+        <Button text='Hello World'/>
+        
+        {/*NOTA: Ahora que pasa si quiero aceptar otro valor por defecto, 
+        es decir que me pueden pasar otra porpiedad pero es opcional entonces en
+        el componente indicamos un valor por defecto con el igual o don el defaultProps*/}
+        <Button text='' nombre='Joe'/>
+
         <Greeting3 title="Hola Mundo" name="Joe"/>
         <Greeting3 title="Hola React" name="Ryan"/>
         <Greeting3 title="Hola JSX"/>
