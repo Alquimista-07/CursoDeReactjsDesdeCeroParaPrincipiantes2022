@@ -27,6 +27,10 @@ import { TaskCard } from './Task';
 // que es más sencilla que usar una clase
 import { Saludar } from './Saludar';
 
+// Importamos nuestro componente que se va a usar para la explicación de FetchAPI
+import { Post } from './Post';
+
+// INICIO PRINCIPAL DE LA APLICACIÓN
 // Recordemos que en la carpeta public tenemos un archivo index.html el cual tiene un <div id="root"></div>
 // que es donde react va a montar la aplicación. Por lo tanto ara indicarle que es lo que vamos a poner dentro 
 // de ese elemento usamos ReactDOM.createRoot y obtenemos el elemento por su id. Y todo eso nos va a devolver
@@ -196,6 +200,10 @@ root.render(
             <h1>Registro de usuario</h1>
             <button>Enviar</button>
         </form>
+
+        <br/>
+        {/* Componente Post para el tema de fetch API */}
+        <Post/>
 
     </>
 );
