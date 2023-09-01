@@ -1,0 +1,28 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------
+HOOKS: Los Hooks de react son tan solo funciones que React provee para añadir funcionalidad extra a la aplicación. Por ejemplo
+       si queremos tener algo interactivo como cambiar un elemento por otro necesitamos una forma de guardar datos y aunque
+       podríamos pensar en variables y funciones típicas de JavaScript necesitamos si o si funcionalidades extras y estas 
+       funcionalidades extras son justamente los Hooks.
+
+       La web con la documentación es: https://legacy.reactjs.org/docs/hooks-reference.html
+
+       Basic Hooks
+              useState
+              useEffect
+              useContext
+       
+       Additional Hooks
+              useReducer
+              useCallback
+              useMemo
+              useRef
+              useImperativeHandle
+              useLayoutEffect
+              useDebugValue
+              useDeferredValue
+              useTransition
+              useId
+       Library Hooks
+              useSyncExternalStore
+              useInsertionEffect
+--------------------------------------------------------------------------------------------------------------------------------------------------
