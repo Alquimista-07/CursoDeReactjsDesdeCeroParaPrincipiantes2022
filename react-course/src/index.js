@@ -91,6 +91,13 @@ function Greeting2(){
     );
 }
 
+// Función para ver lo del manejador de eventos en el input
+// y es la forma más común ya que queda mucho más ordenado 
+// y entendible el código en el elemento htlm
+const hancleChange = (event) => {
+    console.log(event.target.value);
+}
+
 // Ahora para indicarle a React que voy a poner dentro de la aplicación usamos el root y la función render
 // la cual espera elementos hijos html
 root.render(
@@ -167,6 +174,28 @@ root.render(
         <TaskCard ready={true}/>
 
         <Saludar/>
+
+        {/* Vamos a crear un input de html para ver sus eventos, adicionalmente no necesariamente
+        dentro de las llaves tenemos que escribir la función ( por ejemplo: <input id="hola" onChange={ (event) => {} )
+        sin que podemos crearla fuera del método render y llamarla */}
+        <input id="hola" onChange={hancleChange}/>
+
+        {/* Otro ejemplo con Event Handler */}
+        <input id="hola2" onDoubleClick={() => {
+            console.log('Double click');
+        }}/>
+
+        {/* Otro ejemplo con Event Handler en formularios */}
+        {/* NOTA: Ahora como sabemos en html tiene un comportamiento por defecto el cual es que refresca la página cuando 
+                  envía los datos al servidor, cosa que a día de hoy no esta muy bien visto, por lo tanto para poder cancelar
+                  ese comportamiento en React es del event usar la funció preventDefault  */}
+        <form onSubmit={(ev) => { 
+                ev.preventDefault();
+                alert('Enviado');
+            }}>
+            <h1>Registro de usuario</h1>
+            <button>Enviar</button>
+        </form>
 
     </>
 );

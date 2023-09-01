@@ -31,7 +31,12 @@ export function Button({ text, name }){
     if(!text){
         console.error('El texto es requerido');
     }
-    return <button>
+    /* Un concepto en React es el Event Handlers o manejador de eventos y este cocepto lo que 
+       nos permite es poder hacer algo cuando ocurre un evento en una interfaz, por ejemplo hacer
+       click en un botón y como sabemos cada elemento html tiene sus propios eventos*/
+    return <button onClick={function () {
+        console.log('Hola Mundo!');
+    }}>
         {text} - {name}
     </button>
 }
