@@ -19,6 +19,9 @@ import Product, {Navbar} from './Product'
 // Importamos el componente botón
 import { Button } from './Button';
 
+// Importamos el nuevo componente TaskCard
+import { TaskCard } from './Task';
+
 // Recordemos que en la carpeta public tenemos un archivo index.html el cual tiene un <div id="root"></div>
 // que es donde react va a montar la aplicación. Por lo tanto ara indicarle que es lo que vamos a poner dentro 
 // de ese elemento usamos ReactDOM.createRoot y obtenemos el elemento por su id. Y todo eso nos va a devolver
@@ -155,5 +158,8 @@ root.render(
                 city: 'Springfield'
             }}
         />
+
+        <TaskCard ready={true}/>
+
     </>
 );

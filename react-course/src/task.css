@@ -1,0 +1,18 @@
+/*
+NOTA: Esta es otra forma de añadir estilos es usando clases de css y es lo más similar que vamos a 
+        ver en html
+*/
+
+.card {
+    background-color: #202020;
+    color: aliceblue;
+    padding: 10px;
+}
+
+.bg-red {
+    background: red;
+}
+
+.bg-green {
+    background: green;
+}
