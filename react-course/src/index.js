@@ -31,7 +31,7 @@ import { Saludar } from './Saludar';
 import { Post } from './Post';
 
 // Importamos los componentes para los ejemplos del hook useState
-import { Counter, HookInput } from './Counter';
+import { Counter, HookInput, HookUseEfect } from './Counter';
 
 // INICIO PRINCIPAL DE LA APLICACIÓN
 // Recordemos que en la carpeta public tenemos un archivo index.html el cual tiene un <div id="root"></div>
@@ -250,6 +250,10 @@ root.render(
         <br/>
         {/* Segundo Componenete para el ejemplo del hook useState */}
         <HookInput/>
+        
+        <hr/>
+        {/* Primer componente para el ejemplo del hook useEffect */}
+        <HookUseEfect/>
 
     </>
 );
