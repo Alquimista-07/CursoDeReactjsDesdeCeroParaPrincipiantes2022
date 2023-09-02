@@ -1,11 +1,11 @@
-import Tasklist from './Tasklist';
-import TaskForm from './TaskForm';
+import Tasklist from './components/Tasklist';
+import TaskForm from './components/TaskForm';
 
 // Importamos los hooks
 import { useState, useEffect } from 'react'; 'react';
 
 // Importamos nuestras tareas y las renombramos usando as
-import { tasks as data } from './tasks';
+import { tasks as data } from './data/tasks';
 
 
 function App() {
@@ -23,14 +23,13 @@ function App() {
     // Creamos una función para crear tareas la cual va a recibir una tarea
     // para añadirlo al arreglo y devolverlo para que lo pueda usar el otro
     // componente
-    function createTask(taskTitle){
+    function createTask(task){
       // En este caso usamos un spred para crear una copia del arreglo y no alterar
-      // el original y le definimos el objeto nuevo como segundo parámetro ya que
-      // desde el TaskForm estamos mandando un String
+      // el original y le definimos el objeto nuevo que se le esta mandando en el prop.
       setTasks([...tasks, {
-        title: taskTitle,
+        title: task.title,
         id: tasks.length,
-        description: 'Nueva tarea'
+        description: task.description
       }])
     }
 
