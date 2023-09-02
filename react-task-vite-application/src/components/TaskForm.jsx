@@ -1,16 +1,25 @@
-import { useState } from "react"
+import { useState, useContext } from "react"
 
-function TaskForm({crearTarea}) {
+// Ahora vamos a importar el nombre del TaskContext y que fue como lo nombreamos
+// y adicionalmente para poder usar el contexto importamos desde React el useContext
+import { TaskContext } from '../context/TaskContext';
+
+function TaskForm() {
     
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
+
+    // Usamos el useContext y le decimos que queremos usar le TaskContext
+    // pero como el TaskContext es un objeto y acá solo necesitamos unos
+    // valores de ese objeto entonces lo podemos desestructurar
+    const { createTask } = useContext(TaskContext);
 
     const handleSubmit = (ev) => {
         // Evitamos el comportamiento por defecto para que al llamar el evento submit no recargue
         ev.preventDefault()
         
         // Le pasamos un objeto que tiene un titulo y una descripción
-        crearTarea({
+        createTask({
             title,
             description
         });
