@@ -33,10 +33,15 @@ function App() {
       }])
     }
 
+    // Función para eliminar tareas
+    function deleteTask(taskId){
+      setTasks(tasks.filter(task => task.id !== taskId));
+    }
+
   return (
     <>
       <TaskForm crearTarea={createTask}/>
-      <Tasklist tasks={tasks}/>
+      <Tasklist tasks={tasks} borrarTarea={deleteTask}/>
     </>
   )
 }
