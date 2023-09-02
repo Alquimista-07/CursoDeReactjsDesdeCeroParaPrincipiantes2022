@@ -36,3 +36,4 @@ Las siguientes son algunas extensiones que se instalan en VS Code y que pueden s
        * Ayu: Sirve para cambiar el tema
        * ES7+ React/Redux/React-Native snippets: Son atajos para crear componentes y demás cosas de React de forma 
          mucho más rápida
+       * Tailwind CSS IntelliSense: Son snippets para TailwindCss
